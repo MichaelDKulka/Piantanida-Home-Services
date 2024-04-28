@@ -1,0 +1,251 @@
+/* Reset default margin and padding */
+body, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style for the top bar with phone number */
+  #top-bar {
+    background-color: #19295a; /* Deep blue color */
+    color: white;
+    text-align: left;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001; /* Higher than the navbar to keep it on top */
+    font-family: Arial, sans-serif;
+    border-bottom: 2px solid gold; /* Thin gold border */
+  }
+  
+  #navbar {
+    background-color: #d1d1d1; /* Deep blue color */
+    overflow: hidden;
+    position: fixed;
+    top: 30px; /* Adjust if needed, depending on the height of the #top-bar */
+    width: 100%;
+    z-index: 1000;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out logo and menu items */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px; /* Adjust padding as necessary */
+  }
+  
+  #navbar a, #navbar a:hover {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px; /* Adjust padding as necessary */
+  }
+  
+  #navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox for the list as well */
+    align-items: center; /* Center items vertically */
+  }
+  
+  #navbar ul li {
+    position: relative;
+  }
+  
+  #navbar ul li a {
+    display: block;
+    padding: 10px 15px; /* Adjust padding as necessary */
+  }
+  #navbar ul li.dropdown:hover .dropdown-content {
+    display: block; /* This ensures the dropdown appears only on hover */
+  }
+  
+  /* Style changes for dropdown links */
+  #navbar ul li.dropdown .dropdown-content a {
+    background-color: white; /* Grey background for dropdown items */
+  }
+  
+  /* Hover effect for dropdown links */
+  #navbar ul li.dropdown .dropdown-content a:hover {
+    background-color: #ddd; /* Lighter grey for hover effect */
+    color: black;
+  }
+
+
+
+
+  /* ... rest of your styles ... */
+  
+  /* Logo style */
+  #logo img {
+    height: auto;
+    max-height: 60px; /* Adjust based on the size of your actual logo */
+    width: auto; /* Adjust if you have a specific width */
+  }
+  
+  /* Additional body padding to push the content down below the fixed navbar */
+  body {
+    padding-top: 80px; /* Height of top-bar plus navbar */
+  }
+
+  .call-us-banner {
+    background-color: #19295a; /* Deep blue color */
+    color: white;
+    padding: 5px 0;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    z-index: 1020; /* Ensures it stays above the navbar */
+  }
+  
+  .jumbotron-custom {
+    background: url('./assets/HomeScreenServe.png') no-repeat center center; 
+    background-size: cover;
+    color: white;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75); /* Adding text shadow for better readability */
+    padding-top: 10rem; /* Increase the top padding to push the content down */
+    padding-bottom: 10rem; /* Increase the bottom padding for equal spacing */
+  }
+  
+  .jumbotron-custom h1, 
+  .jumbotron-custom p {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Optional: Use a pseudo-element for a dark overlay to increase text contrast */
+  .jumbotron-custom:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); /* Adding a black overlay with 50% opacity */
+    z-index: 1; /* Ensure it sits behind the text content */
+  }
+
+  
+  #contact .card {
+    border-radius: 15px; /* Rounded corners for the card */
+  }
+  
+  #contact h2, #contact h4 {
+    color: #19295a; /* Matching the color scheme of the rest of the website */
+  }
+  
+  #contact .fab {
+    font-size: 24px; /* Larger icons for visibility */
+  }
+  
+  #contact a {
+    color: inherit; /* Ensuring the icons match the text color */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  #contact a:hover {
+    color: #007bff; /* Highlight color on hover */
+  }
+  
+  #contact .card-body {
+    padding: 2rem; /* Spacious padding inside the card */
+  }
+  
+  #contact .text-secondary {
+    font-weight: 500; /* Slightly bolder text for readability */
+  }
+  
+  /* If icons are used, add styles for them */
+  #contact .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  /* Additional styles for responsive adjustments if needed */
+  @media (max-width: 768px) {
+    #contact .card-body {
+      padding: 1.5rem; /* Smaller padding on smaller screens */
+    }
+  }
+
+  /* Service Cards Enhancements */
+.card {
+  border: none;
+  transition: transform .3s ease, box-shadow .3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  border-top-left-radius: calc(.25rem - 1px);
+  border-top-right-radius: calc(.25rem - 1px);
+  transition: transform .3s ease;
+  object-fit: cover; /* Ensure images cover the card area */
+  height: 200px; /* Fixed height for consistency */
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+.card-title {
+  font-size: 1.5rem; /* Make the title larger */
+  color: #19295a; /* Title color */
+  transition: color .3s ease;
+}
+
+.card-body {
+  transition: background-color .3s ease;
+}
+
+.card:hover .card-body {
+  background-color: #f8f9fa; /* Slight background color change on hover */
+}
+
+.card-text {
+  min-height: 100px; /* Ensure all texts are of same height */
+  color: #333; /* Text color */
+}
+
+.card-deck .card {
+  margin-bottom: 30px; /* Add space between cards */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card-img-top {
+    height: auto; /* On smaller screens, let images be of their natural height */
+  }
+}
+
+/* Card body padding for alignment */
+.card-body {
+  padding: 1.25rem; /* consistent padding */
+}
+
+/* Card Deck spacing */
+.card-deck .card:not(:last-child) {
+  margin-right: 15px; /* space between cards, not on the last child */
+}
+
+.card-deck .card:not(:first-child) {
+  margin-left: 15px; /* space between cards, not on the first child */
+}
+
+@media (max-width: 1200px) {
+  /* On medium screens, cards should have a bit more space */
+  .card-deck .card {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  /* On small screens, card deck collapses into a single column */
+  .card-deck {
+    flex-direction: column;
+  }
+}
+
+  
