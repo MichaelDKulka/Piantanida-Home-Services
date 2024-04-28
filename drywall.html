@@ -7,6 +7,7 @@
   <meta name="description" content="Top-quality dry wall services by Piantanida Home Services. Professional and punctual work for your home projects in Neptune, NJ.">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
+  
 </head>
 <body>
   <header>
@@ -49,8 +50,14 @@
     <div class="jumbotron text-center">
       <h1 class="display-4">Dry Wall Services</h1>
       <p class="lead">Precision and professionalism in every project we handle.</p>
-      <a href="#contact" class="btn btn-primary">Request a Quote</a>
-    </div>
+     <!-- Request a Quote Button -->
+        <div class="text-center my-4">
+             <h2>Contact Us for a Free Estimate</h2>
+             <p>Ready to start your project? Contact us now for a free, no-obligation estimate.</p>
+             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#quoteModal">
+                 Request a Quote
+            </button>
+         </div>
 
     <!-- Service Detail Section -->
     <section class="container">
@@ -131,6 +138,37 @@
       </div>
       
       
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="quoteModal" tabindex="-1" role="dialog" aria-labelledby="quoteModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="quoteModalLabel">Contact Information</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            <p>Contact Piantanida Home Services for a free quote today!</p>
+            <ul>
+                <li>Name: Rob Piantanida</li>
+                <li>Phone: (732) 510-5330</li>
+                <li>Email: <a href="mailto:piantanidahomeservices@gmail.com">piantanidahomeservices@gmail.com</a></li>
+            </ul>
+            <p>Feel free to call, text, or email us any time for a free quote!</p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+  
+    </div>
   </main>
 
   <footer class="text-center py-4">
@@ -141,5 +179,6 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src = "./script.js"></script>
 </body>
 </html>
